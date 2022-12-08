@@ -1,0 +1,72 @@
+﻿@model IEnumerable<mVehAuction.Models.LotLocation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lot Locations</h1>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" style="color:white">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MapX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MapY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MapLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTimeOfLot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LotPhoneNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneralManager)
+            </th>
+        </tr>
+    </thead>
+    <tbody style="color:white">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MapX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MapY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MapLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTimeOfLot)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.LotPhoneNum)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GeneralManager)
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

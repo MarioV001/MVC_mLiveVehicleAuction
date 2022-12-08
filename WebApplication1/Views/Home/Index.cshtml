@@ -1,0 +1,77 @@
+﻿@model IEnumerable<mVehAuction.Models.Vehicle>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div >
+    <div id="HomeBanner">
+        <div id="BodyImg"><img src="~/Images/MainBody.png" /></div>
+        
+        <div id="BodyHeadTxt">
+            <h2 >100% Online Auctions</h2>
+            <h4 style="font-size: 2vw;">Over <u>100,000</u> Used and Salvage Cars, Vans, Motorcycles and HGVs sold every year</h4>
+            <div id="RegItems">
+                <div id="IconNum"><img src="~/Images/circle.png" height="40" width="40" style="margin-right:-26px" />1</div>
+                <div id="itemText">Sign up for Mpart Membership</div>
+            </div>
+            <div id="RegItems">
+                <div id="IconNum"><img src="~/Images/circle.png" height="40" width="40" style="margin-right:-26px" />2</div>
+                <div id="itemText">Sign up for Mpart Membership</div>
+            </div>
+            <div id="RegItems">
+                <div id="IconNum"><img src="~/Images/circle.png" height="40" width="40" style="margin-right:-26px" />3</div>
+                <div id="itemText">Sign up for Mpart Membership</div>
+            </div>
+            <div id="RegButton">Register to start biddin</div>
+        </div>
+        
+        
+        <div id="flagImg"><img width="48" height="48" src="~/Images/Bg-Flag.png" /></div>
+    </div>
+    <div id="ClearAbs"></div>
+    <br />
+    <div id="ContentMainText">
+        <h2 style="color:#4aa9c8;">Recently Added</h2>
+        
+        <div class="WrapFlexItems">
+        @{
+            var Veh = Enumerable.Reverse(Model).Take(6).ToList();
+            //This will get the last 6 items in the DbContext list (last items created)
+            if (Veh != null)
+            {
+                foreach (var item in Veh)
+                {
+                    TempData["VehFound"] = "";
+
+
+                        <div id="MainVehDemo">
+                        <a asp-controller="Vehicles" asp-action="Details" asp-route-id="@item.Id">
+                            <div id="ImgPrevMainPage">
+                                <img src='@item.GetImageLocationPath(item.ImageURL)' class="ImgPrevMainPage" />
+                            </div>
+                            <div id="Content">
+                                <h5>@item.Make @item.Model</h5>
+                                Lot # <u>3303415</u>
+                                <br />
+                                Current Bid: @item.CurrentBid
+                                <br />
+                                Location: @item.Location
+                            </div>
+                        </a>
+                        </div>
+                   
+                }
+            }
+        }
+        </div>
+    </div>
+    <br />
+    <div id="ContentMainBody">
+
+        <img src="~/Images/MV-Logo.png" height="80" width="80" />
+
+        <h1 class="display-4">Welcome To MVLiveAuction X</h1>
+
+    </div>
+
+</div>

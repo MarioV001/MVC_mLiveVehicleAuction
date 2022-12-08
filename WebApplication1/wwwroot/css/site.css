@@ -1,0 +1,549 @@
+html {
+    font-size: 14px;
+    color: mediumvioletred;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #222222;
+   color:white;
+}
+
+.List__fontcolor{
+    color: white;
+}
+
+.ContainerFix{
+    margin:0;
+    height:75px;
+    display:contents;
+    
+}
+#MvLogo {
+    float: left;
+    width: 90px;
+    position:absolute;
+}
+#MV_MainNavBar {
+    height: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0;
+    border: 3px solid #333333;
+    border-radius: 8px;
+    padding-left: 5px;
+    background: rgb(56,54,54);
+    background: linear-gradient(90deg, rgba(33,30,30,1) 0%, rgba(18,41,43,1) 32%, rgba(12,15,17,1) 100%);
+    float: left;
+    margin-left: 100px;
+    overflow:hidden;
+}
+    #MV_MainNavBar #SrchImg {
+        float: left;
+        width: 35px;
+    }
+    #MV_MainNavBar #SrchFloat {
+        float: left;
+        width: calc(100% - 160px);
+    }
+    #MV_MainNavBar #SrchBtn {
+        float: right;
+        width:120px;
+    }
+    #MV_MainNavBar #ClearFloat{
+        clear:left;
+    }
+
+    .MVInput {
+        color: white;
+        height: 35px;
+        background-color: transparent;
+        border: 3px solid transparent;
+    }
+    .MVInput:focus {
+        outline: 0;
+        color: white;
+        height: 35px;
+        background-color: #1c343370;
+        border: none;
+    }
+
+
+#MenuNavItems {
+    clear: both;
+    width: 100%;
+    height: 55px;
+    background: rgb(11,12,17);
+    background: linear-gradient(90deg, rgba(28,31,43,1) 0%, rgba(18,34,45,1) 100%);
+}
+.MV-NavBar {
+    float: left;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.MV-NavBar_Items {
+    float: left;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    list-style: none;
+    padding-top:5px;
+    height:55px;
+}
+    .MV-NavBar_Items:hover {
+        background-color: #2e2e2e;
+    }
+
+#EndOFNavBox {
+    clear:both;
+    width: 100%;
+    height: 30px;
+    background-color: #e07524;
+    color: #eeeae4;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#ContentMainText {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.WrapFlexItems {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#ContentMainBody {
+    text-align: center;
+    clear: both;
+    padding-top: 50px;
+}
+
+#HomeBanner {
+    width: 100%;
+    height:auto;
+    min-height:330px;
+    position: absolute;
+    left: 0;
+    background: rgb(25,40,51);
+    background: linear-gradient(90deg, rgba(25,40,51,1) 0%, rgba(37,125,185,1) 100%);
+    z-index: 5;
+}
+
+    #ClearAbs {
+        margin-top: 400px;
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+        clear:both;
+    }
+#HomeBanner #BodyHeadTxt {
+    padding-left: 120px;
+    padding-top: 20px;
+    text-align: left;
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    float:left;
+    position:absolute;
+    display:block;
+}
+
+#HomeBanner #BodyImg {
+    float: right;
+    height: 100%;
+}
+#HomeBanner #BodyImg a{
+    height:100%;
+}
+
+#HomeBanner #BodyHeadTxt #RegItems {
+    float: left;
+    width: 280px;
+    height: 100px;
+    margin-top: 35px;
+}
+
+#HomeBanner #BodyHeadTxt #RegItems #IconNum {
+    color:black;
+    font-size:larger;
+    margin-bottom:15px;
+}
+
+    #HomeBanner #BodyHeadTxt #RegButton {
+        clear: both;
+        margin-left: -80px;
+        width: 320px;
+        height: 50px;
+        background-color: #68ba27;
+        border-radius: 30px;
+        text-align: center;
+        padding-top: 12px;
+        color: #384230;
+        font-family: Helvetica;
+        font-size:large;
+        font-weight:bold;
+    }
+    #HomeBanner #BodyHeadTxt #RegButton:hover {
+        background-color: #48941f;
+        color: #e6eee3;
+        cursor: pointer;
+    }
+
+#HomeBanner #flagImg {
+    width: 48px;
+    height: 48px;
+    z-index: 6;
+    margin-top:300px;
+    margin-left:10px;
+    position:absolute;
+}
+
+
+.VehCreatLeft {
+    float: left;
+    color: #fefefe;
+    width: 450px;
+    background-color: #2c2c2c;
+    border: 3px solid #333333;
+    border-radius: 8px;
+    padding: 10px
+}
+
+    .VehCreatLeft:hover {
+        border: 3px solid #414141;
+    }
+
+.Imgsel {
+    float: right;
+    color: white;
+    height:auto;
+    width: 480px;
+    background-color: #2c2c2c;
+    border: 3px solid #333333;
+    margin-right: 50px;
+    margin-top: 5px;
+    border-radius: 8px;
+    padding:8px;
+    clear:right;
+    overflow:hidden;
+}
+    .Imgsel:hover {
+        border: 3px solid #414141;
+    }
+
+.AutoL {
+    width: 100%;
+    color: white;
+    background-color: #283e4a;
+    border-color: #153b57;
+    margin-top: 1px;
+    margin-bottom: 8px;
+}
+.AutoL_2 {
+    width: 440px;
+    color: white;
+    background-color: #283e4a;
+    border-color: #153b57;
+    margin-top: 1px;
+    margin-bottom: 8px;
+}
+.AutoLText {
+    width: 320px;
+}
+
+.MvCheckBox {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.MVButton {
+    width: 100%;
+    background-color: #68ba27;
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+    .MVButton:hover {
+        background-color: #75dd2d;
+    }
+
+.MVBtn_Small {
+    padding: 0;
+    width: 20%;
+    background-color: #181818;
+    height: 100%;
+    text-decoration: none;
+    display: inline-block;
+    border: 0px;
+    text-align: center;
+    color: #929292;
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    outline: none;
+    padding-top:4px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .MVBtn_Small:hover {
+        background-color: #ffffff;
+        cursor:pointer;
+    }
+    .MVBtn_Small:active {
+        box-shadow: 0 5px #666;
+        cursor: pointer;
+}
+
+.MVButton_2 {
+    width: 100%;
+    height:60px;
+    background-color:#5fb7a2;
+    color: #2e2e2e;
+    font-size:large;
+    font-weight: bold;
+    font-family:'Segoe UI';
+    margin-top:20px;
+
+}
+    .MVButton_2:hover {
+        background-color: #2a6846;
+        color:#afd5b5;
+    }
+.MVButton_3 {
+    float: left;
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    background-color: #68ba27;
+    border: none;
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+    .MVButton_3:hover {
+        background-color: #75dd2d;
+    }
+.MvImgUpl {
+    width: 214px;
+    height: 120px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    object-fit: cover;
+}
+.MvImgDisplay {
+    float: left;
+    width: 314px;
+    height: 220px;
+    padding: 0px;
+    border: 2px solid #122e2f;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.ContextMenu {
+    width: auto;
+    height: 45px;
+    background: rgb(69,131,70);
+    background: linear-gradient(90deg, rgba(69,131,70,1) 20%, rgba(51,139,149,1) 89%);
+    padding: 5px;
+    border: 3px solid #283029;
+    border-radius: 8px;
+}
+
+.ContextButton {
+    float: left;
+    width: auto;
+    height: 30px;
+    background-color: #9a3d3d;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    color: #e8d1d1;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid #4b825a;
+    border-radius: 8px;
+}
+    .ContextButton:hover {
+        border: 2px solid #a05a5a;
+        color: white;
+    }
+    .ContextButton a {
+        color: #d9a9a9;
+        text-decoration: none;
+    }
+
+
+#MainVehDemo {
+    float:left;
+    text-align:left;
+    width: 420px;
+    height: 500px;
+    background-color: #1d1e22;
+    border: 3px solid #262a30;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-left: 3%;
+    margin-bottom:20px;
+    min-width:400px;
+}
+#MainVehDemo:hover {
+    border: 3px solid #4b825a;
+    cursor:pointer;
+}
+#MainVehDemo a{
+    color:white;
+    text-decoration:none;
+}
+
+    .ImgPrevMainPage {
+        width: 100%;
+        height: 350px;
+        padding: 0px;
+        border: 2px solid #122e2f;
+        border-radius: 0px;
+        object-fit: cover;
+    }
+#MainVehDemo #Content {
+    clear:both;
+    width:100%;
+    height:120px;
+    padding:15px;
+
+}
+
+    .ImgListPrevMain {
+    width: 355px;
+    height: 220px;
+    z-index: 2;
+    object-fit: cover;
+    margin-right:8px;
+}
+
+
+.VehitemsCol {
+    width: 100%;
+    height: 45px;
+    background: rgb(20,23,24);
+    text-transform: uppercase;
+    font-size:17px;
+}
+.Vehitems {
+    vertical-align:top;
+    background: rgb(20,23,24);
+    background: linear-gradient(90deg, rgba(20,23,24,1) 47%, rgba(22,25,25,1) 100%);
+    border: 3px solid #283029;
+    padding-top:5px;
+}
+
+    .Vehitems:hover {
+        border: 2px solid #a05a5a;
+        background: rgb(30,34,36);
+        background: linear-gradient(90deg, rgba(51,38,38,1) 0%, rgba(30,34,36,1) 15%, rgba(30,34,36,1) 47%, rgba(28,35,39,1) 85%, rgba(51,38,38,1) 100%);
+    }
+
+#ItemsDispaly {
+    color: white;
+}
+    #ItemsDispaly a {
+        font-weight: bold;
+        color: #11b0a1;
+    }
+#ItemsDispaly_2 a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.BidBtn {
+    display:block;
+    height: 35px;
+    width: 125px;
+    border: 2px solid #122e2f;
+    border-radius: 12px;
+    text-align:center;
+    padding-top:3px;
+}
+
+.pMV {
+    position:relative;    
+    top: 50%;
+    text-align:center;
+}
+
+.ImgPrevMain {
+    position:absolute;
+    object-fit: cover;
+    width: 100%;
+    height:420px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    z-index:2;
+}
+
+hr.mv1 {
+    border-top: 1px solid #939393;
+}
+
+
+.mv-list-group {
+    list-style-type: none;
+    display: table;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+#SortableGallery li {
+    float: left;
+    height: auto;
+    width: auto;
+    border: none;
+}
+.mv-highlight {
+    
+    background-color: #9fdb2f7f;
+}
+
+
+#ImgPrevFooter {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    clear: both;
+    width: 100%;
+    height: 35px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #1e1e1e;
+    overflow:hidden;
+}

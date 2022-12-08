@@ -1,0 +1,54 @@
+﻿@model mVehAuction.Models.LotLocation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Lot Locations</h1>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div>
+    <h4>LotLocation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LocationName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LocationName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MapX)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MapX)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MapY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MapY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MapLocation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MapLocation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartTimeOfLot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartTimeOfLot)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+

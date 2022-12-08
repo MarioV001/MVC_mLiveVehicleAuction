@@ -1,0 +1,226 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-WebApplication1-5A2D8772-9FE1-4D1D-BDE5-AAD6A1636C04</UserSecretsId>
+    <Copyright>ExDevelopers</Copyright>
+    <PackageIcon>MV (logo).png</PackageIcon>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Content Include="Resources\MV-Logo.png" />
+    <Content Include="Views\VehIMGUpload\04f6f809-35c9-4cc1-ab94-71caa3fb6304\0.jpg" />
+    <Content Include="Views\VehIMGUpload\04f6f809-35c9-4cc1-ab94-71caa3fb6304\1.jpg" />
+    <Content Include="Views\VehIMGUpload\04f6f809-35c9-4cc1-ab94-71caa3fb6304\2.jpg" />
+    <Content Include="Views\VehIMGUpload\04f6f809-35c9-4cc1-ab94-71caa3fb6304\3.jpg" />
+    <Content Include="Views\VehIMGUpload\04f6f809-35c9-4cc1-ab94-71caa3fb6304\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\04f6f809-35c9-4cc1-ab94-71caa3fb6304\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\04f6f809-35c9-4cc1-ab94-71caa3fb6304\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\04f6f809-35c9-4cc1-ab94-71caa3fb6304\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\09d191dc-888b-4736-a15c-db9f24be1494\0.jpg" />
+    <Content Include="Views\VehIMGUpload\09d191dc-888b-4736-a15c-db9f24be1494\1.jpg" />
+    <Content Include="Views\VehIMGUpload\09d191dc-888b-4736-a15c-db9f24be1494\2.jpg" />
+    <Content Include="Views\VehIMGUpload\09d191dc-888b-4736-a15c-db9f24be1494\3.jpg" />
+    <Content Include="Views\VehIMGUpload\09d191dc-888b-4736-a15c-db9f24be1494\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\09d191dc-888b-4736-a15c-db9f24be1494\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\09d191dc-888b-4736-a15c-db9f24be1494\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\09d191dc-888b-4736-a15c-db9f24be1494\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\0cc53b62-4cb7-49e9-844a-e28f69682bb6\0.jpg" />
+    <Content Include="Views\VehIMGUpload\0cc53b62-4cb7-49e9-844a-e28f69682bb6\1.jpg" />
+    <Content Include="Views\VehIMGUpload\0cc53b62-4cb7-49e9-844a-e28f69682bb6\2.jpg" />
+    <Content Include="Views\VehIMGUpload\0cc53b62-4cb7-49e9-844a-e28f69682bb6\3.jpg" />
+    <Content Include="Views\VehIMGUpload\0cc53b62-4cb7-49e9-844a-e28f69682bb6\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\0cc53b62-4cb7-49e9-844a-e28f69682bb6\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\0cc53b62-4cb7-49e9-844a-e28f69682bb6\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\0cc53b62-4cb7-49e9-844a-e28f69682bb6\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\21b975f4-6a6f-4d29-8755-26a80567b71e\0.jpg" />
+    <Content Include="Views\VehIMGUpload\21b975f4-6a6f-4d29-8755-26a80567b71e\1.jpg" />
+    <Content Include="Views\VehIMGUpload\21b975f4-6a6f-4d29-8755-26a80567b71e\2.jpg" />
+    <Content Include="Views\VehIMGUpload\21b975f4-6a6f-4d29-8755-26a80567b71e\3.jpg" />
+    <Content Include="Views\VehIMGUpload\21b975f4-6a6f-4d29-8755-26a80567b71e\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\21b975f4-6a6f-4d29-8755-26a80567b71e\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\21b975f4-6a6f-4d29-8755-26a80567b71e\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\21b975f4-6a6f-4d29-8755-26a80567b71e\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\0.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\1.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\2.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\3.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\4.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\3e08900c-cf51-4ae8-a316-99b1c0027dbe\HD\4.jpg" />
+    <Content Include="Views\VehIMGUpload\3ea9846a-4d4a-4ddb-9946-560e94cb0f2e\0.jpg" />
+    <Content Include="Views\VehIMGUpload\3ea9846a-4d4a-4ddb-9946-560e94cb0f2e\1.jpg" />
+    <Content Include="Views\VehIMGUpload\3ea9846a-4d4a-4ddb-9946-560e94cb0f2e\2.jpg" />
+    <Content Include="Views\VehIMGUpload\3ea9846a-4d4a-4ddb-9946-560e94cb0f2e\3.jpg" />
+    <Content Include="Views\VehIMGUpload\3ea9846a-4d4a-4ddb-9946-560e94cb0f2e\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\3ea9846a-4d4a-4ddb-9946-560e94cb0f2e\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\3ea9846a-4d4a-4ddb-9946-560e94cb0f2e\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\3ea9846a-4d4a-4ddb-9946-560e94cb0f2e\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\4af6ba04-a184-4261-9b4c-8267cd87eaa4\0.jpg" />
+    <Content Include="Views\VehIMGUpload\4af6ba04-a184-4261-9b4c-8267cd87eaa4\1.jpg" />
+    <Content Include="Views\VehIMGUpload\4af6ba04-a184-4261-9b4c-8267cd87eaa4\2.jpg" />
+    <Content Include="Views\VehIMGUpload\4af6ba04-a184-4261-9b4c-8267cd87eaa4\3.jpg" />
+    <Content Include="Views\VehIMGUpload\4af6ba04-a184-4261-9b4c-8267cd87eaa4\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\4af6ba04-a184-4261-9b4c-8267cd87eaa4\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\4af6ba04-a184-4261-9b4c-8267cd87eaa4\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\4af6ba04-a184-4261-9b4c-8267cd87eaa4\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\60e68348-fa08-4078-b586-cb59a9f58653\0.jpg" />
+    <Content Include="Views\VehIMGUpload\60e68348-fa08-4078-b586-cb59a9f58653\1.jpg" />
+    <Content Include="Views\VehIMGUpload\60e68348-fa08-4078-b586-cb59a9f58653\2.jpg" />
+    <Content Include="Views\VehIMGUpload\60e68348-fa08-4078-b586-cb59a9f58653\3.jpg" />
+    <Content Include="Views\VehIMGUpload\60e68348-fa08-4078-b586-cb59a9f58653\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\60e68348-fa08-4078-b586-cb59a9f58653\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\60e68348-fa08-4078-b586-cb59a9f58653\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\60e68348-fa08-4078-b586-cb59a9f58653\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\0.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\1.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\2.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\3.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\4.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\6c6c3c6a-3380-47ca-8590-7c9f760e456b\HD\4.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\0.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\1.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\2.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\3.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\4.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\6e5ae330-f7d7-47a1-bb30-911293dbae5c\HD\4.jpg" />
+    <Content Include="Views\VehIMGUpload\76505b96-0345-40c3-9e76-7dffe94d4f4b\0.jpg" />
+    <Content Include="Views\VehIMGUpload\76505b96-0345-40c3-9e76-7dffe94d4f4b\1.jpg" />
+    <Content Include="Views\VehIMGUpload\76505b96-0345-40c3-9e76-7dffe94d4f4b\2.jpg" />
+    <Content Include="Views\VehIMGUpload\76505b96-0345-40c3-9e76-7dffe94d4f4b\3.jpg" />
+    <Content Include="Views\VehIMGUpload\76505b96-0345-40c3-9e76-7dffe94d4f4b\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\76505b96-0345-40c3-9e76-7dffe94d4f4b\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\76505b96-0345-40c3-9e76-7dffe94d4f4b\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\76505b96-0345-40c3-9e76-7dffe94d4f4b\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\82b2af1d-6aaa-47e4-8339-98bcc8ff5730\0.jpg" />
+    <Content Include="Views\VehIMGUpload\82b2af1d-6aaa-47e4-8339-98bcc8ff5730\1.jpg" />
+    <Content Include="Views\VehIMGUpload\82b2af1d-6aaa-47e4-8339-98bcc8ff5730\2.jpg" />
+    <Content Include="Views\VehIMGUpload\82b2af1d-6aaa-47e4-8339-98bcc8ff5730\3.jpg" />
+    <Content Include="Views\VehIMGUpload\82b2af1d-6aaa-47e4-8339-98bcc8ff5730\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\82b2af1d-6aaa-47e4-8339-98bcc8ff5730\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\82b2af1d-6aaa-47e4-8339-98bcc8ff5730\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\82b2af1d-6aaa-47e4-8339-98bcc8ff5730\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\8310fa10-3f9b-44c5-8836-4479c523519e\0.jpg" />
+    <Content Include="Views\VehIMGUpload\8310fa10-3f9b-44c5-8836-4479c523519e\1.jpg" />
+    <Content Include="Views\VehIMGUpload\8310fa10-3f9b-44c5-8836-4479c523519e\2.jpg" />
+    <Content Include="Views\VehIMGUpload\8310fa10-3f9b-44c5-8836-4479c523519e\3.jpg" />
+    <Content Include="Views\VehIMGUpload\8310fa10-3f9b-44c5-8836-4479c523519e\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\8310fa10-3f9b-44c5-8836-4479c523519e\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\8310fa10-3f9b-44c5-8836-4479c523519e\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\8310fa10-3f9b-44c5-8836-4479c523519e\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\895627b0-d6f7-402c-97c1-777faecf65b0\0T.jpg" />
+    <Content Include="Views\VehIMGUpload\895627b0-d6f7-402c-97c1-777faecf65b0\1T.JPG" />
+    <Content Include="Views\VehIMGUpload\895627b0-d6f7-402c-97c1-777faecf65b0\2T.JPG" />
+    <Content Include="Views\VehIMGUpload\895627b0-d6f7-402c-97c1-777faecf65b0\3T.JPG" />
+    <Content Include="Views\VehIMGUpload\895627b0-d6f7-402c-97c1-777faecf65b0\HD\0T.jpg" />
+    <Content Include="Views\VehIMGUpload\895627b0-d6f7-402c-97c1-777faecf65b0\HD\1T.JPG" />
+    <Content Include="Views\VehIMGUpload\895627b0-d6f7-402c-97c1-777faecf65b0\HD\2T.JPG" />
+    <Content Include="Views\VehIMGUpload\895627b0-d6f7-402c-97c1-777faecf65b0\HD\3T.JPG" />
+    <Content Include="Views\VehIMGUpload\8d95dc9c-2dfa-4d2d-84b9-615af2b8863b\0.jpg" />
+    <Content Include="Views\VehIMGUpload\8d95dc9c-2dfa-4d2d-84b9-615af2b8863b\1.jpg" />
+    <Content Include="Views\VehIMGUpload\8d95dc9c-2dfa-4d2d-84b9-615af2b8863b\2.jpg" />
+    <Content Include="Views\VehIMGUpload\8d95dc9c-2dfa-4d2d-84b9-615af2b8863b\3.jpg" />
+    <Content Include="Views\VehIMGUpload\8d95dc9c-2dfa-4d2d-84b9-615af2b8863b\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\8d95dc9c-2dfa-4d2d-84b9-615af2b8863b\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\8d95dc9c-2dfa-4d2d-84b9-615af2b8863b\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\8d95dc9c-2dfa-4d2d-84b9-615af2b8863b\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\8e22cbc6-0f44-4cde-83b8-7efb49da9505\0.jpg" />
+    <Content Include="Views\VehIMGUpload\8e22cbc6-0f44-4cde-83b8-7efb49da9505\1.jpg" />
+    <Content Include="Views\VehIMGUpload\8e22cbc6-0f44-4cde-83b8-7efb49da9505\2.jpg" />
+    <Content Include="Views\VehIMGUpload\8e22cbc6-0f44-4cde-83b8-7efb49da9505\3.jpg" />
+    <Content Include="Views\VehIMGUpload\8e22cbc6-0f44-4cde-83b8-7efb49da9505\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\8e22cbc6-0f44-4cde-83b8-7efb49da9505\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\8e22cbc6-0f44-4cde-83b8-7efb49da9505\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\8e22cbc6-0f44-4cde-83b8-7efb49da9505\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\90bf7441-e139-4f4a-b42d-6bfbeac1ead9\0.jpg" />
+    <Content Include="Views\VehIMGUpload\90bf7441-e139-4f4a-b42d-6bfbeac1ead9\1.jpg" />
+    <Content Include="Views\VehIMGUpload\90bf7441-e139-4f4a-b42d-6bfbeac1ead9\2.jpg" />
+    <Content Include="Views\VehIMGUpload\90bf7441-e139-4f4a-b42d-6bfbeac1ead9\3.jpg" />
+    <Content Include="Views\VehIMGUpload\90bf7441-e139-4f4a-b42d-6bfbeac1ead9\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\90bf7441-e139-4f4a-b42d-6bfbeac1ead9\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\90bf7441-e139-4f4a-b42d-6bfbeac1ead9\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\90bf7441-e139-4f4a-b42d-6bfbeac1ead9\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\98341a27-45e4-43dc-ad30-4981211873c9\0.jpg" />
+    <Content Include="Views\VehIMGUpload\98341a27-45e4-43dc-ad30-4981211873c9\1.jpg" />
+    <Content Include="Views\VehIMGUpload\98341a27-45e4-43dc-ad30-4981211873c9\2.jpg" />
+    <Content Include="Views\VehIMGUpload\98341a27-45e4-43dc-ad30-4981211873c9\3.jpg" />
+    <Content Include="Views\VehIMGUpload\98341a27-45e4-43dc-ad30-4981211873c9\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\98341a27-45e4-43dc-ad30-4981211873c9\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\98341a27-45e4-43dc-ad30-4981211873c9\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\98341a27-45e4-43dc-ad30-4981211873c9\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\98f32d56-aa46-446a-97d0-3216a8b5876b\0.jpg" />
+    <Content Include="Views\VehIMGUpload\98f32d56-aa46-446a-97d0-3216a8b5876b\1.jpg" />
+    <Content Include="Views\VehIMGUpload\98f32d56-aa46-446a-97d0-3216a8b5876b\2.jpg" />
+    <Content Include="Views\VehIMGUpload\98f32d56-aa46-446a-97d0-3216a8b5876b\3.jpg" />
+    <Content Include="Views\VehIMGUpload\98f32d56-aa46-446a-97d0-3216a8b5876b\HD\0.jpg" />
+    <Content Include="Views\VehIMGUpload\98f32d56-aa46-446a-97d0-3216a8b5876b\HD\1.jpg" />
+    <Content Include="Views\VehIMGUpload\98f32d56-aa46-446a-97d0-3216a8b5876b\HD\2.jpg" />
+    <Content Include="Views\VehIMGUpload\98f32d56-aa46-446a-97d0-3216a8b5876b\HD\3.jpg" />
+    <Content Include="Views\VehIMGUpload\edc966e3-d9d3-4798-8fef-2fdf2a3f693c\0.png" />
+    <Content Include="Views\VehIMGUpload\edc966e3-d9d3-4798-8fef-2fdf2a3f693c\1.png" />
+    <Content Include="Views\VehIMGUpload\edc966e3-d9d3-4798-8fef-2fdf2a3f693c\2.png" />
+    <Content Include="Views\VehIMGUpload\edc966e3-d9d3-4798-8fef-2fdf2a3f693c\3.png" />
+    <Content Include="Views\VehIMGUpload\edc966e3-d9d3-4798-8fef-2fdf2a3f693c\HD\0.png" />
+    <Content Include="Views\VehIMGUpload\edc966e3-d9d3-4798-8fef-2fdf2a3f693c\HD\1.png" />
+    <Content Include="Views\VehIMGUpload\edc966e3-d9d3-4798-8fef-2fdf2a3f693c\HD\2.png" />
+    <Content Include="Views\VehIMGUpload\edc966e3-d9d3-4798-8fef-2fdf2a3f693c\HD\3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jQuery.UI" Version="1.12.1.1" />
+    <PackageReference Include="LazZiya.ImageResize" Version="4.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\NewFolder\" />
+    <Folder Include="wwwroot\TempUPL_FLD\" />
+    <Folder Include="Views\VehIMGUpload\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Pictures\MV\MV (logo).png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

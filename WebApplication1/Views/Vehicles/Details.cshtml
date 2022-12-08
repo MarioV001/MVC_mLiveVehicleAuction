@@ -1,0 +1,154 @@
+﻿@model mVehAuction.Models.Vehicle
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link rel="stylesheet" type="text/css" href="~/css/Details.css" />
+
+<div>
+    <div id="TopBannerLocation"><h6>Lot: #@Model.LotLocation | Sale Location: <a href="">@Html.DisplayFor(Model => Model.Location)</a> | Sale Date: @Model.AuctionStartDate</h6></div>
+    <hr />
+
+    <div id="ImgHolder" class="ImgPrevBlock">
+        <div id="ImgMainHolder">
+            <div id="ImgBTNPrev"><p class="pMV"><</p></div>
+            <div id="ImgBTNNext"><p class="pMV">></p></div>
+            <a href="#" class="popOut">
+                <img id="MainImageShow" src='@Model.GetImageLocationPath(Model.ImageURL,true)' class="ImgPrevMain" />
+            </a>
+            
+        </div>
+        <div id="SmallimgPrev">
+            @{
+                int count = 0;
+                foreach(string ImgX in FileUpload.GetImagePrevCounter(Model.ImageURL))
+                {
+                    string imgid = "ImgPrev" + count;
+                    <img id="@imgid" src='@ImgX' class="MvImgPREV" onclick="ChangeIMG(this.id)" />
+                    count++;
+                }
+            }
+            <script>
+                function ChangeIMG(id) {
+                    var imageMain = document.getElementById('MainImageShow');
+                    var ThisImg = document.getElementById(id);
+                    var HD = ThisImg.src.substring(0, ThisImg.src.lastIndexOf("/")) + "/HD" + ThisImg.src.substring(ThisImg.src.lastIndexOf("/"),ThisImg.src.lenght);
+                    
+                    imageMain.src = HD;
+                }        
+        </script>
+        </div>
+    </div>
+    <div id="RightAllign">
+        <div id="CatDIV">@Model.Category</div>
+        <mH2L >@Model.Year @Model.Make @Model.Model</mH2L> <div id="SideWall"></div>
+        <br />
+        <div id="BidDateBar">
+            @Model.AuctionStartDate
+            <img id="WatchIcon" src="~/Images/eye.png" />
+        </div>
+    </div>
+
+    <div id="VehInfoR">
+        
+        <div id="TopBarCTX" style="background-color:#141414">
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <mv4>Current Bid</mv4>
+            }
+            else
+            {
+                <mv4>Log In To Bid</mv4>
+            }
+            
+        </div>
+        <div id="ContentX">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Category
+                </dt>
+                <dd class="col-sm-10" style="text-align:left">
+                    @Html.DisplayFor(model => model.Category)
+                </dd>
+                <hr.mv1 />
+                <dt class="col-sm-2 ">
+                    Make
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Make)
+                </dd>
+                <hr.mv1 />
+                <dt class="col-sm-2">
+                    Model
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Model)
+                </dd>
+            </dl>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+        
+    </div>
+    <div id="ClearDivs"></div>
+    <div id="VehInfoR" style="width:765px;">
+        
+        <div id="TopBarCTX" >
+            Lot: #@Model.LotLocation
+        </div>
+        <div id="ContentX">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Category
+                </dt>
+                <dd class="col-sm-10" style="text-align:end">
+                    @Html.DisplayFor(model => model.Category)
+                </dd>
+                <hr.mv1 />
+                <dt class="col-sm-2 ">
+                    Make
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Make)
+                </dd>
+                <hr.mv1 />
+                <dt class="col-sm-2">
+                    Model
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Model)
+                </dd>
+            </dl>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+      $(function() {
+              $('.popOut').on('click', function() {
+                $('.img-responsive').attr('src', $("#MainImageShow").find('img').attr('src'));
+                  $('#imagemodal').modal('show');   
+              });     
+      });
+    </script>
+    <div id="imagemodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="//placehold.it/1000x600" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

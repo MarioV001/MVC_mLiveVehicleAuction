@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MvLiveAuction</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/mVehAuction.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark box-shadow ">
+            <div class="container-fluid ContainerFix">
+                <div id="MvLogo">
+                    <img src="~/Images/MV-Logo.png" height="80" width="80" />
+                </div>
+                <div id="MV_MainNavBar">
+                    <div id="SrchImg">
+                        <img src="~/Images/explore.png" height="25" width="25" />
+                    </div>
+                        <form asp-action="SeachFormResult">
+                            
+                        <div id="SrchFloat"><input name="SearchString" class="form-control MVInput" /></div>
+                        <div id="SrchBtn"><input type="submit" value="Search" class="MVButton_3"/></div>
+                        </form>
+                </div>
+                <partial name="_LoginPartial" />
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            </div>
+            
+        </nav>
+        <div id="MenuNavItems">
+            <ul class="MV-NavBar">
+                <li class="MV-NavBar_Items">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="MV-NavBar_Items">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </li>
+                <li class="MV-NavBar_Items">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Vehicles" asp-action="Index">Vehicles</a>
+                </li>
+                <li class="MV-NavBar_Items">
+                    <a class="nav-link text-light" asp-area="" asp-controller="Vehicles" asp-action="SeachForm">Search</a>
+                </li>
+                 <li class="MV-NavBar_Items">
+                    <a class="nav-link text-light" asp-area="" asp-controller="LotLocations" asp-action="Index">Lot Locations</a>
+                </li>
+            </ul>
+
+        </div>
+        <div id="EndOFNavBox">Need to know more about a vehicle? Get a live virtual viewing on any one of our 1000’s of vehicles on sale ></div>
+    </header>
+    <div class="container-xxl">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - mVehAuction - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery-ui.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery-ui.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

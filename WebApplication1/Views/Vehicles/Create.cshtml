@@ -1,0 +1,280 @@
+﻿@model mVehAuction.Models.Vehicle
+
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+<reference path="~/lib/jquery/dist/jquery-ui.js" />
+<link href="~/css/jquery-ui.theme.min.css" rel="stylesheet" />
+<link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="~/lib/jquery/dist/jquery-ui.js"></script>
+<h1>Create</h1>
+
+<h4>Vehicle Information</h4>
+<hr />
+
+<form id="MSRSX" name="MSRSX" asp-action="Create" enctype="multipart/form-data">
+<div class="row VehCreatLeft">
+    <div class="col">
+        
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Make" class="control-label"></label>
+                @Html.DropDownListFor(Model => Model.Make, new SelectList(Model.GetVehBrands()),new { @class = "form-control AutoL" })
+                <span asp-validation-for="Make" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control AutoL" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <br />
+                @Html.DropDownListFor(Model => Model.Year, new SelectList(Model.GetAllYears()),new { @class = "form-control AutoL" })
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odometer" class="control-label"></label>
+                <input asp-for="Odometer" class="form-control AutoL" />
+                <span asp-validation-for="Odometer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                @Html.DropDownListFor(Model => Model.Category, new SelectList(Model.GetVehCategory()),new { @class = "form-control AutoL" })
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Damage Type</label>
+                @Html.DropDownListFor(Model => Model.DamageType, new SelectList(Model.GetDamageType()),new { @class = "form-control AutoL" })
+                <span asp-validation-for="DamageType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VIN" class="control-label"></label>
+                <input asp-for="VIN" class="form-control AutoL" />
+                <span asp-validation-for="VIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Body Type</label>
+                @Html.DropDownListFor(Model => Model.BodyStyle, new SelectList(Model.GetBodyType()),new { @class = "form-control AutoL" })
+                <span asp-validation-for="BodyStyle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Engine CC</label>
+                <input asp-for="EngineCC" class="form-control AutoL" id="EnginCCtxt"/>
+                <span asp-validation-for="EngineCC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label AutoLText">Transmission Type</label>
+                @Html.DropDownListFor(Model => Model.Transmision, new SelectList(Model.GetTransType()),new { @class = "form-control AutoL" })
+                <span asp-validation-for="Transmision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label AutoLText">Transmission Gears Amount</label>
+                <input asp-for="TransGears" class="form-control AutoL" />
+                <span asp-validation-for="TransGears" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Drive" class="control-label"></label>
+                @Html.DropDownListFor(Model => Model.Drive, new SelectList(Model.GetDriveType()),new { @class = "form-control AutoL" })
+                <span asp-validation-for="Drive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Fuel Type</label>
+                @Html.DropDownListFor(Model => Model.FuelType, new SelectList(Model.GetFuelType()),new { @class = "form-control AutoL" })
+                <span asp-validation-for="FuelType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label AutoLText">Has Vehicle Documents</label>
+                @Html.DropDownListFor(Model => Model.VehDocuments, new SelectList(Model.GetYesNo()),new { @class = "form-control AutoL" })
+            </div>
+            <div class="form-group">
+                <label class="control-label AutoLText">Has Vehicle keys</label>
+                @Html.DropDownListFor(Model => Model.Keys, new SelectList(Model.GetYesNo()),new { @class = "form-control AutoL" })
+            </div>
+            
+            <div >
+                @Html.HiddenFor(m => m.ImageURL)
+                @Html.HiddenFor(d => d.TimeCreated)
+                
+                <input class="btn MVButton_2" runat="server" value="Add New Vehicle" onclick="AddVehicleBTN()" />
+
+                <script type="text/javascript">
+                    function AddVehicleBTN() 
+                    {
+                        if ($("#MSRSX").valid()) {
+                            ReOrderPhotos();
+                        }else alert("Please Fill In All Forms ");
+                    }
+                    function ReOrderPhotos(){
+                        var data = new FormData();
+                        //append photos
+                        var elms = document.querySelectorAll("[id^='image_']");
+                        if (elms.length < 3) return alert("less Than 4 photos are uploaded!");
+                        for (var i = 0; i < elms.length; i++) {
+                            data.append("ImgList", elms[i].src);
+                        }
+
+                        var _url = '@Url.Action("ReOrderImageList", "Vehicles")';
+                        $.ajax(
+                            {
+                                url: _url,
+                                data: data,
+                                processData: false,
+                                contentType: false,
+                                type: "POST",
+                                success: function (data) {
+                                    CreatVeh();
+                                },
+                                error: function (xhr, status, error) {
+                                    alert(status + " " + error);
+                                }
+                            }
+                        );
+                    }
+                    function CreatVeh() {
+                        var data = new FormData();
+                        //Creat the form date
+                        var _url = '@Url.Action("Create", "Vehicles")';
+                        $.ajax(
+                            {
+                                url: _url,
+                                data: $('#MSRSX').serialize(),
+                                type: "POST",
+                                success: function (data) {
+                                    window.location.href = data;
+                                },
+                                error: function (xhr, status, error) {
+                                    alert(status + " " + error);
+                                }
+                            }
+                        );
+                    }
+                </script>
+            </div>
+        
+    </div>
+</div>
+
+<div class="row Imgsel">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Starting Bid</label>
+                <input asp-for="CurrentBid" class="form-control AutoL_2" />
+                <span asp-validation-for="CurrentBid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Buy It Now</label>
+                    <input asp-for="BuyNow" class="form-control AutoL_2" />
+                <span asp-validation-for="BuyNow" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                    @Html.DropDownList("DropdownList")
+                    <span asp-validation-for="Make" class="text-danger"></span>
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+                <div class="form-group">
+                    <label asp-for="RetailValue" class="control-label"></label>
+                    <input asp-for="RetailValue" class="form-control AutoL_2" />
+                    <span asp-validation-for="RetailValue" class="text-danger"></span>
+                </div>
+        </form>
+    </div>
+</div>
+
+<div class="row Imgsel">
+    You need to upload images of the vehicle!
+
+        <form enctype="multipart/form-data" >
+        <dl>
+            <dt>
+                <label class="form-label">Upload Up To 5 images</label>
+            </dt>
+            <dd>
+                    <input class="form-control form-control-smg" type='file' id='UploadFileX' accept="image/png,image/jpg,image/jpeg" multiple />
+                    <asp:RegularExpressionValidator ID="uplValidator" runat="server" ControlToValidate="UploadFile"
+                                                ErrorMessage=".jpg/jpeg , png formats are allowed only!"
+                                                ValidationExpression="(.+\.([Jj][Pp][Gg])|.+\.([Pp][Nn][Gg])|.+\.([Jj][Pp][Ee][Gg]))"></asp:RegularExpressionValidator>
+            </dd>
+        </dl>
+            <input class="btn MVButton" runat="server" value="Upload Images" onclick="uploadFiles()" />
+    </form>
+        <script type="text/javascript">
+            function uploadFiles() {
+                var input = document.getElementById("UploadFileX");
+                var files = input.files;
+                var formData = new FormData();
+
+                if (files.length == 0) return alert("No image have been selected to upload !");
+                formData.append('ReqKey', '@Model.ImageURL');
+                for (var i = 0; i < files.length; i++) {
+                    formData.append('FormFile', files[i]);
+
+                }
+                var _url = '@Url.Action("UploadFile", "Vehicles")';
+                $.ajax(
+                    {
+                        url: _url,
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        type: "POST",
+                        success: function (data) {
+                            if (data.success) {
+                                var path = input.value;
+                                var ext = path.substring(path.lastIndexOf(".") + 1, path.length).toLowerCase();
+                                for (var i = 0; i < files.length; i++) {
+                                    $('<li class="default"><img id="image_'+ i + '" src="' + '/TempUPL_FLD/' + '@Model.ImageURL' + '/' + i + 'T.' + ext + '" class="MvImgUpl"/></li>').appendTo($("#SortableGallery"));
+                                }
+                                $("#IMGPrevX").show();
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            alert(status + " | " + error);
+                        }
+                    }
+                );
+            }
+        </script>
+</div>
+</form>
+
+
+<script>
+    $(function () {
+        $("#SortableGallery").sortable({
+            placeholder: "mv-highlight",
+            start: function (event, ui) {
+                ui.item.toggleClass("mv-highlight");
+                
+                ui.placeholder.html("<img id='0' src='' class='MvImgUpl'/>");
+                
+                },
+                stop: function (event, ui) {
+                ui.item.toggleClass("mv-highlight");
+                }
+        });
+        $("#SortableGallery").disableSelection();
+    });
+</script>
+
+<div id="IMGPrevX" class="Imgsel" style="display:none;">
+    <ul class="mv-list-group" id="SortableGallery" style="cursor:move;">
+    </ul>
+    <div id="ImgPrevFooter"><div class="MVBtn_Small" runat="server" onclick="ClearImages()">Clear All</div></div>
+</div>
+
+
+
+<div style="clear:both; padding-top:20px;">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

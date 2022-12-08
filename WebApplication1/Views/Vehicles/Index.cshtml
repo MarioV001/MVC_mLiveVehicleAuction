@@ -1,0 +1,92 @@
+﻿@model IEnumerable<mVehAuction.Models.Vehicle>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Vehicles</h1>
+
+<p>
+    <div class="ContextMenu">
+        <a asp-action="Create">
+            <div class="ContextButton">Add New Vehicle</div>
+        </a>
+    </div>
+</p>
+<table class="VehitemsCol">
+    <thead>
+        <tr style="border: 3px solid #283029;">
+            <th style="width:325px; padding-left:10px;">
+                Image
+            </th>
+            <th style="width:auto ">
+                Lot Info
+            </th>
+            <th >
+                Vehicle Info
+            </th>
+            <th>
+                Condition
+            </th>
+            <th>
+                Sale Info
+            </th>
+            <th >
+                Bids
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="Vehitems">
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id" >
+                    <img id="ImgPrev" src='@item.GetImageLocationPath(item.ImageURL)' class="ImgListPrevMain" />
+                </a>
+            </td>
+            <td id="ItemsDispaly">
+                    <a asp-action="Details" asp-route-id="@item.Id" >
+                        <h5 style="font-weight:bold;">@Html.DisplayFor(modelItem => item.Year) @Html.DisplayFor(modelItem => item.Make)
+                        @Html.DisplayFor(modelItem => item.Model)
+                    </h5>
+                    </a>
+                    Lot# <a href="">@Html.DisplayFor(itm => item.LotLocation)</a>
+                
+            </td>
+                <td id="ItemsDispaly">
+                    <h6 style="font-weight:bold;">Odometer</h6>
+                    @Html.DisplayFor(itm => item.Odometer)
+                    <br><br/>
+                    <h6>Estimate Retail Value: 00</h6>
+                </td>
+                <td id="ItemsDispaly">
+                    <h6>@Html.DisplayFor(itm => item.Category)</h6>
+                    <h6>Keys: @Html.DisplayFor(itm => item.Keys)</h6>
+                    <h6>Documents: @Html.DisplayFor(itm => item.VehDocuments)</h6>
+                </td>
+                    <td id="ItemsDispaly">
+                    <a href=""><h6>@Html.DisplayFor(itm => item.Location)</h6></a>
+                    <h6>item# @Html.DisplayFor(itm => item.Id)</h6>
+                    <br/>
+                    <h6>Auction Start:</h6>
+                    <h6 style="color:#c33838;">@Html.DisplayFor(itm => item.AuctionStartDate)</h6>
+                </td>
+            <td id="ItemsDispaly_2">
+                <h6>Current Bid:</h6>
+                <txt2 style="font-size:20px">@Html.DisplayFor(itm => item.CurrentBid)</txt2> GBP
+                <br/>
+                <a asp-action="Details" asp-route-id="@item.Id" class="BidBtn" style="background-color:#3f8f1e;">Details</a>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="BidBtn" style="background-color:#9eb92e;">Edit</a>  
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="BidBtn" style="background-color:#c32727;">Delete</a>
+                    }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
